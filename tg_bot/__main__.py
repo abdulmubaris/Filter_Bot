@@ -18,26 +18,7 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-┈╭━━━━━━━━━━━╮┈
-┈┃╭━━━╮┊╭━━━╮┃┈
-╭┫┃┈▇┈┃┊┃┈▇┈┃┣╮
-┃┃╰━━━╯┊╰━━━╯┃┃
-╰┫╭━╮╰━━━╯╭━╮┣╯
-┈┃┃┣┳┳┳┳┳┳┳┫┃┃┈
-┈┃┃╰┻┻┻┻┻┻┻╯┃┃┈
-┈╰━━━━━━━━━━━╯┈
-╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗
-║║║╠─║─║─║║║║║╠─
-╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝
-
-*Hai* *{}*,*My Name is* *{}*! 
-
-Am a powerful *Filter Bot* in Telegram.
-Developed by this [Legend](tg://user?id={}).
-
-```Y You Can Add any kind of Filters with This Bot!```
-
-/help for more details..
+🤣🤣Ha ha No one gonna help you
 """
 
 HELP_STRINGS = """
@@ -142,7 +123,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🛅ADD ME TO YOUR GROUP🛅", url="t.me/{}?startgroup=true".format(bot.username))]]))
+                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Join our channel", url="https://t.me/movies23ez".format(bot.username))]]))
     else:
         update.effective_message.reply_text("")
 
